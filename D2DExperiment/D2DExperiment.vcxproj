@@ -67,6 +67,7 @@
     <ClInclude Include="Background.h" />
     <ClInclude Include="BaseApp.h" />
     <ClInclude Include="DPIScale.h" />
+    <ClInclude Include="DrawingObject.h" />
     <ClInclude Include="GameTime.h" />
     <ClInclude Include="LabelDisplayBox.h" />
     <ClInclude Include="NonPlayer.h" />
@@ -76,6 +77,7 @@
   <ItemGroup>
     <ClCompile Include="Background.cpp" />
     <ClCompile Include="BaseApp.cpp" />
+    <ClCompile Include="DrawingObject.cpp" />
     <ClCompile Include="GameTime.cpp" />
     <ClCompile Include="LabelDisplayBox.cpp" />
     <ClCompile Include="NonPlayer.cpp" />
