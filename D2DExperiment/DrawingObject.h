@@ -1,7 +1,8 @@
 #pragma once
 #include <d2d1.h>
 #include "Velocity.h"
-
+#include "TUtils.h"
+/// Version 1.01
 class DrawingObject
 {
 protected:
@@ -16,9 +17,12 @@ protected:
 	RECT windowSize;
 	bool active;
 	Velocity velocity;
+	D2D1_POINT_2F acceleration;
 	void setWindowSize(int, int, int, int);
 	ID2D1SolidColorBrush* brush;
 	float strokeWidth{ 1.f };
+	float speed{ 0.f };
+	float angle{ 0.f };
 
 public:
 	DrawingObject();
@@ -28,5 +32,15 @@ public:
 	bool isActive() { return active; }
 	void setBrush(ID2D1SolidColorBrush*);
 	void setStrokeWidth(float);
+	void setVelocity(float, float);
+	void setAcceleration(float, float);
+	void setAccelerationX(float);
+	void setAccelerationY(float);
+	float getAccelerationX();
+	float getAccelerationY();
+	float getVelocityX();
+	float getVelocityY();
+	void setSpeed(float);
+	void setAngle(float);
 };
 
