@@ -1,5 +1,6 @@
 #pragma once
 #include <d2d1.h>
+#include <functional>
 #include "Velocity.h"
 #include "TUtils.h"
 /// Version 1.01
@@ -18,6 +19,7 @@ protected:
 	bool active;
 	Velocity velocity;
 	D2D1_POINT_2F acceleration;
+	D2D1_POINT_2F gravity;
 	void setWindowSize(int, int, int, int);
 	ID2D1SolidColorBrush* brush;
 	float strokeWidth{ 1.f };
@@ -42,5 +44,8 @@ public:
 	float getVelocityY();
 	void setSpeed(float);
 	void setAngle(float);
+	void setGravity(float f) { gravity.y = f; }
+	float getGravity() { return gravity.y; }
+	bool useGravity() { return !(gravity.x == 0 && gravity.y == 0); }
 };
 

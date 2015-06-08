@@ -7,6 +7,8 @@ DrawingObject::DrawingObject()
 	velocity.setY(0);
 	acceleration.x = 0.f;
 	acceleration.y = 0.f;
+	gravity.x = 0.f;
+	gravity.y = 0.f; // Default to not using gravity
 	active = false;
 }
 
